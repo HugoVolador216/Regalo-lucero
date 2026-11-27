@@ -193,7 +193,7 @@ function actualizarContador() {{
     const m = Math.floor((diff / (1000 * 60)) % 60);
     const s = Math.floor((diff / 1000) % 60);
     document.getElementById("contador").innerHTML =
-        `⏳ Próxima sorpresa a las 20:11 en: ${{h}}h ${{m}}m ${{s}}s`;
+        `⏳ Próxima sorpresa en: ${{h}}h ${{m}}m ${{s}}s`;
 }}
 setInterval(actualizarContador, 1000);
 actualizarContador();
@@ -208,7 +208,11 @@ if st.button("💌 Lee esto primero", use_container_width=True):
 if st.session_state['intro_abierta']:
     with st.container(border=True):
         st.subheader("💌 Para ti, Lucero")
-        st.write("Escribe aquí tu texto de introducción antes de que empiece a abrir los días...")
+        st.write(''"Hola amor, este es el regalo que te queria dar, va a ser un poco tonteria pero bueno, ns si te gustara del todo o que pero bueno, mi regalo es dedicarte a ti mi primera aplicacion en si misma, no va a haber otra primera aplicacion y mejor porque como tú no hay dos. Como tu no hay dos porque eres lo primero que pienso al despertarme y lo ultimo que pienso al acostarme, me encantaria poder verte todos los días pero bueno, el destino nos ha separado pero por suerte tu cierto 12 de septiembre de este año a las 20:11 decidiste escribirme''")
+        st.image('fotos/foto conversa.jpg')
+        st.write('Eramos dos chavales (tu más que yo la verdad), aun lo somos pero ahora hemos aprendido un poco más el uno del otro y cada vez que se más de ti me gustas más, de verdad, estoy super orgulloso de ti, de que a pesar de todo sigues adelante, eres muy fuerte y que sigas adelante y tengas la razon de la mayorias de mis sonrisas en el día, mi mejor pensamiento y siempre estas en mis mejores momentos de la semana siempre y TE AMO A TI RIZOS, a ti y solo a ti, me vuelves lokito, muy lokito.')
+        st.write('Creo que todos estn hartos de que hable tanto de ti la verdad, te quiero mucho de verdad y seguro qeu vas a lograr todo lo que te propongas en la vida y vas a poder seguir adelante, yo voy a estar ahi para ti siempre.')
+        st.write('Este calendario la idea es que cada día te vas a encontrar una sorpresa distinta, a ver si te gustan y que sepas que estoy orgulloso de la persona en la que te has covertido, un beso a ti, a Doña Ruth, Don Jesusito y la Torre chulilla jajaja')
         st.image("fotos/foto juntos espejo 1.jpg", use_column_width=True)
 
         if st.button("❌ Cerrar introducción", use_container_width=True):
