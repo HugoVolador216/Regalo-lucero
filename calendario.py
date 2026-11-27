@@ -38,7 +38,7 @@ sorpresas = {
     },
     8: {
         'texto': 'Nuestro primer dia juntos',
-        'foto': 'fotos/descarga.jpg'
+        'foto': 'fotos/foto juntos espejo 1.jpg'
     },
     9: {
         'texto': 'Gracias por aguantar mis tonterias como esta',
@@ -50,11 +50,11 @@ sorpresas = {
     },
     11: {
         'texto': 'Nuestro primer dia juntos',
-        'foto': 'fotos/descarga.jpg'
+        'foto': 'fotos/foto juntos espejo 1.jpg'
     },
     12: {
         'texto': 'Nuestro primer dia juntos',
-        'foto': 'fotos/descarga.jpg'
+        'foto': 'fotos/foto juntos espejo 1.jpg'
     },
     13: {
         'texto': '''Me encanta estar contigo en cualquier lugar, aunque no nos dejen volver a ese Domino's jajaja''',
@@ -63,7 +63,7 @@ sorpresas = {
     },
     14: {
         'texto': 'Nuestro primer dia juntos',
-        'foto': 'fotos/descarga.jpg'
+        'foto': 'fotos/foto juntos espejo 1.jpg'
     },
     15: {
         'texto': 'Contigo aprendi a que puede que no salga tan mal en las fotos',
@@ -71,7 +71,7 @@ sorpresas = {
     },
     16: {
         'texto': 'Nuestro primer dia juntos',
-        'foto': 'fotos/descarga.jpg'
+        'foto': 'fotos/foto juntos espejo 1.jpg'
     },
     17: {
         'texto': 'Aunque llevamos juntos solo 3 meses y 5 días me encanta estar contigo',
@@ -83,7 +83,7 @@ sorpresas = {
     },
     19: {
         'texto': 'Nuestro primer dia juntos',
-        'foto': 'fotos/descarga.jpg'
+        'foto': 'fotos/foto juntos espejo 1.jpg'
     },
     20: {
         'texto': 'Me encanta hacer el tonto contigo en cualquier lado',
@@ -92,7 +92,7 @@ sorpresas = {
     },
     21: {
         'texto': 'Nuestro primer dia juntos',
-        'foto': 'fotos/descarga.jpg'
+        'foto': 'fotos/foto juntos espejo 1.jpg'
     },
     22: {
         'texto': 'Aunque me mientas diciendo que salgo bien en las fotos pero bueno, te quiero mucho igualmente amor',
@@ -100,11 +100,11 @@ sorpresas = {
     },
     23: {
         'texto': 'Nuestro primer dia juntos',
-        'foto': 'fotos/descarga.jpg'
+        'foto': 'fotos/foto juntos espejo 1.jpg'
     },
     24: {
         'texto': 'Nuestro primer dia juntos',
-        'foto': 'fotos/descarga.jpg'
+        'foto': 'fotos/foto juntos espejo 1.jpg'
     }
 }
 
