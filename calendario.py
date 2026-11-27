@@ -109,7 +109,7 @@ sorpresas = {
 }
 
 # 3. Configuración de fecha y hora (en diciembre cambia MES_OBJETIVO = 12)
-MES_OBJETIVO = 11
+MES_OBJETIVO = 12
 HORA_APERTURA = 20
 MINUTO_APERTURA = 11
 ahora = datetime.datetime.now()
@@ -136,38 +136,24 @@ if 'alturas_dias' not in st.session_state:
     st.session_state['alturas_dias'] = alturas
 
 # 5. Estilos CSS dinámicos (brillo dorado + alturas personalizadas por botón)
-css_botones = ""
-for d, altura in st.session_state['alturas_dias'].items():
-    tamaño_letra = "24px" if d == 24 else "18px"
-    borde_extra = "border: 2px solid #FFD700;" if d == 24 else ""
-    css_botones += f"""
-    div.stButton > button:has(p:contains("Día {d}")),
-    button[kind="secondary"]:has(p:contains("Día {d}")),
-    button[kind="primary"]:has(p:contains("Día {d}")) {{
-        height: {altura}px;
-        font-size: {tamaño_letra};
-        {borde_extra}
-    }}
-    """
-
-st.markdown(f"""
+st.markdown("""
 <style>
-@keyframes brilloDorado {{
-    0% {{ box-shadow: 0 0 6px #FFD700; border-color: #FFD700; transform: scale(1); }}
-    50% {{ box-shadow: 0 0 22px #FFD700, 0 0 10px #FFF8DC; border-color: #FFF8DC; transform: scale(1.04); }}
-    100% {{ box-shadow: 0 0 6px #FFD700; border-color: #FFD700; transform: scale(1); }}
-}}
+@keyframes brilloDorado {
+    0% { box-shadow: 0 0 6px #FFD700; border-color: #FFD700; transform: scale(1); }
+    50% { box-shadow: 0 0 22px #FFD700, 0 0 10px #FFF8DC; border-color: #FFF8DC; transform: scale(1.04); }
+    100% { box-shadow: 0 0 6px #FFD700; border-color: #FFD700; transform: scale(1); }
+}
 
-div.stButton > button {{
+div.stButton > button {
     font-weight: bold;
     border-radius: 12px;
     min-height: 60px;
-}}
+}
 
-div.stButton > button[kind="primary"] {{
+div.stButton > button[kind="primary"] {
     border: 2px solid #FFD700 !important;
     animation: brilloDorado 1.8s infinite;
-}}
+}
 </style>
 """, unsafe_allow_html=True)
 
@@ -178,7 +164,7 @@ st.snow()
 # 7. Contador en tiempo real hasta las próximas 20:11
 components.html(f"""
 <div id="contador" style="text-align:center; color:#FFD700; font-family:sans-serif; font-size:18px; font-weight:bold; padding:8px; background:rgba(0,0,0,0.25); border-radius:10px; border:1px solid #FFD700;">
-    Calculando tiempo para las 20:11...
+    Calculando tiempo la siguiente sorpresa...
 </div>
 <script>
 function actualizarContador() {{
@@ -208,7 +194,7 @@ if st.button("💌 Lee esto primero", use_container_width=True):
 if st.session_state['intro_abierta']:
     with st.container(border=True):
         st.subheader("💌 Para ti, Lucero")
-        st.write(''"Hola amor, este es el regalo que te queria dar, va a ser un poco tonteria pero bueno, ns si te gustara del todo o que pero bueno, mi regalo es dedicarte a ti mi primera aplicacion en si misma, no va a haber otra primera aplicacion y mejor porque como tú no hay dos. Como tu no hay dos porque eres lo primero que pienso al despertarme y lo ultimo que pienso al acostarme, me encantaria poder verte todos los días pero bueno, el destino nos ha separado pero por suerte tu cierto 12 de septiembre de este año a las 20:11 decidiste escribirme''")
+        st.write("Hola amor, este es el regalo que te queria dar, va a ser un poco tonteria pero bueno, ns si te gustara del todo o que pero bueno, mi regalo es dedicarte a ti mi primera aplicacion en si misma, no va a haber otra primera aplicacion y mejor porque como tú no hay dos. Como tu no hay dos porque eres lo primero que pienso al despertarme y lo ultimo que pienso al acostarme, me encantaria poder verte todos los días pero bueno, el destino nos ha separado pero por suerte tu cierto 12 de septiembre de este año a las 20:11 decidiste escribirme")
         st.image('fotos/foto conversa.jpg')
         st.write('Eramos dos chavales (tu más que yo la verdad), aun lo somos pero ahora hemos aprendido un poco más el uno del otro y cada vez que se más de ti me gustas más, de verdad, estoy super orgulloso de ti, de que a pesar de todo sigues adelante, eres muy fuerte y que sigas adelante y tengas la razon de la mayorias de mis sonrisas en el día, mi mejor pensamiento y siempre estas en mis mejores momentos de la semana siempre y TE AMO A TI RIZOS, a ti y solo a ti, me vuelves lokito, muy lokito.')
         st.write('Creo que todos estn hartos de que hable tanto de ti la verdad, te quiero mucho de verdad y seguro qeu vas a lograr todo lo que te propongas en la vida y vas a poder seguir adelante, yo voy a estar ahi para ti siempre.')
@@ -256,7 +242,7 @@ for i, dia in enumerate(st.session_state['orden_dias']):
     # Añadimos saltos de línea invisibles según la altura aleatoria para variar el tamaño de forma 100% compatible
     altura = st.session_state['alturas_dias'][dia]
     if dia == 24:
-        etiqueta = f"🎄\n\nDÍA 24\n\n🎄"
+        etiqueta = "🎄\n\nDÍA 24\n\n🎄"
     elif altura == 95:
         etiqueta = f"\nDía {dia}\n\n"
     elif altura == 75:
